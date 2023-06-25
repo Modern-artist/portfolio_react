@@ -37,14 +37,7 @@ const Home = () => {
       duration: 3,
       opacity: 0.2,
     });
-    gsap.to(".bubble", {
-      x: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".allExp",
-        toggleActions: "restart reverse restart reverse",
-      },
-    });
+    
     gsap.to(".backname", {
       y: 70,
       duration: 3,
