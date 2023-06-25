@@ -13,7 +13,9 @@ export default function Service({
       <h2>{title}</h2>
       <img src={img} alt="" />
       <p>{para}</p>
-      <button>{buttonText}</button>
+      <a href="/Project">
+        <button>{buttonText}</button>
+      </a>
     </div>
   );
 }

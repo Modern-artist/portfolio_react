@@ -271,11 +271,11 @@ const Home = () => {
             <Cards />
           </div>
         </div>
-        <div className="revCards">
+        {/* <div className="revCards">
           {cardsDetails.map((x) => (
             <Cards title={x.title} />
           ))}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

@@ -1,18 +1,19 @@
 import React from 'react'
 import { SiFreelancer } from "react-icons/si";
 
-const Cards = ({title="Card Title",details="some details"}) => {
+const Cards = ({title="Solarways",details="some details"}) => {
   return (
     <div className="review-card ">
       <div className="client">
         <h2 className="">{title}</h2>
-        <span>Japan, Tokyo | Leave Street</span>
+        <span>NOIDA UTTARPRADESH | INDIA</span>
       </div>
       <p>
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-        pariatur, cupiditate provident quam aspernatur debitis quia rerum ad
-        beatae quos itaque totam accusantium veniam eveniet? Quasi, excepturi
-        omnis?"{" "}
+        "This developer excels in both development and UI/UX, combining
+        technical expertise with a keen eye for user experience. Their ability
+        to create seamless and visually appealing interfaces, while delivering
+        robust and efficient code, makes them a valuable asset for any project
+        requiring exceptional development and UI/UX skills. Highly recommended."{" "}
       </p>
       <div className="rating">
         <span>&#11089; &#11089; &#11089; &#11089; &#11089;</span>
@@ -23,10 +24,11 @@ const Cards = ({title="Card Title",details="some details"}) => {
             src="https://i.pinimg.com/564x/7a/e7/43/7ae743e5b7ca2a8b3b547ddde1586388.jpg"
             alt=""
           />
-          <span>Naruto Uzumaki</span>
-          
+          <span>Solarwayz Co</span>
         </div>
-          <p><SiFreelancer size={30} /></p>
+        <p>
+          <SiFreelancer size={30} />
+        </p>
       </div>
     </div>
   );
