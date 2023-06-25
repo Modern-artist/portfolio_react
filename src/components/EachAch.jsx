@@ -26,9 +26,9 @@ const EachAch = ({
 
           <center>
             {/* <button  onClick={}> */}
-            <Link className="viewAchBtn" to="/Achivement">
+            {/* <Link className="viewAchBtn" to="/Achivement">
               Projects
-            </Link>
+            </Link> */}
             {/* </button> */}
           </center>
         </div>

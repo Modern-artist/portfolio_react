@@ -1251,10 +1251,8 @@ body {
     padding: 20px;
   }
   .SkillCard{
+    margin: 20px auto;
     min-width: 80%;
-  }
-  .allSkills {
-    padding: 10px;
   }
   .reviewAbt {
     padding: 20px;
