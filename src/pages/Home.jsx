@@ -2,12 +2,15 @@
 
 import React, { useEffect } from "react";
 import "./HomeStyle.css";
-import logo from "../assets/My_project.png";
+import logo from "../assets/My_project.jpeg";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../components/footer";
 import multiSkill from "../assets/img1.png";
 import Service from "../components/Service";
 import { SocialIcon } from "../components/SocialIcon";
+import { Document } from "react-pdf";
+import Resume from "../assets/resume.pdf";
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -144,7 +147,10 @@ const Home = () => {
             </h1>
           </div>
           <SocialIcon />
-          <button className="hireBtn">Hire me!</button>
+          <a href="mailto:premgameword@gmail.com">
+            <button className="hireBtn">Hire me!</button>
+          </a>
+
           <div className="boxArw">
             <CgScrollV size={40} color="#fdc126" />
           </div>
@@ -177,7 +183,9 @@ const Home = () => {
             engaging user journeys.<br></br>
             <br></br>
           </p>
-          <button className="resumeBtn">My resume</button>
+          <a href="https://modernartist.netlify.app/resume.pdf" target="_blank">
+            <button className="resumeBtn">My resume</button>
+          </a>
         </div>
         <div data-aos="zoom-in" className="skillImg">
           <img src={multiSkill} alt="" />

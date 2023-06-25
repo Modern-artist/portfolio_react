@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { MdLightMode, MdNightlight } from "react-icons/md";
 import "./NavBar.css";
+import logo from "../assets/logo.png";
 import { gsap, Tween, Power4 } from "gsap";
 import SplitType from "split-type";
 
@@ -92,6 +93,7 @@ const NavBar = () => {
     <header>
       <nav className="navbar">
         <Link to="/" className="logo">
+          <img src={logo} alt="" />
           <h1 className="logoChar">Dev</h1>
         </Link>
         <div className="navlinks" id="navlnk">

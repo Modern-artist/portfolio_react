@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// const Cards = ({title="Card Title",details="some details"}) => {
 const EachAch = ({
   title = "Achivements Title",
   about = "Achivements Title",
-  details = "some details",
+  imgUrl = "https://education21.in/wp-content/uploads/2022/02/sih.png",
   index = 0,
 }) => {
   return (
@@ -15,7 +14,9 @@ const EachAch = ({
           <div className="achHeading">
             <span>{title}</span>
           </div>
-          <div className="achImg"></div>
+          <div className="achImg">
+            <img src={imgUrl} alt="" />
+          </div>
         </div>
         <div className="AboutAchive">
           <div className="AboutAchiveInfo">

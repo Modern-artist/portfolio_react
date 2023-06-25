@@ -1,17 +1,17 @@
 import React from "react";
 import "../pages/HomeStyle.css";
-import image from "../assets/ananta.png";
 
 const ProCard = ({
   title = "Achivements Title",
   about = "Achivements Title",
   link = "https://github.com/Modern-artist/Ananta",
+  imgName = "ananta.png",
 }) => {
   return (
     <div className="ProCard">
       <div className="projectImg">
-        <a href="">
-          <img src={image} alt="" />
+        <a href={link} target="/">
+          <img src={require(`../assets/${imgName}`)} alt="" />
         </a>
         {/* <div className="overlay"></div> */}
       </div>

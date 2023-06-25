@@ -23,11 +23,17 @@
 }
 .logoChar {
   text-transform: capitalize;
-  /* width: 200px; */
-  padding: 0 20px;
   color: ghostwhite;
   font-size: 2.4rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo img{
+  width: 80px;
 }
 .char {
   /* display: inline-block; */

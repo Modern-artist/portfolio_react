@@ -1034,13 +1034,17 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   min-width: 200px;
   margin-top: 20px;
   min-height: 250px;
-  padding: 20px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  background-image: url("https://www.technologyforyou.org/wp-content/uploads/2020/07/sih-20.jpg");
-  background-size: cover;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
+  overflow: hidden;
+  max-height: 320px;
+}
+.achImg img{
+  /* width: 120%; */
+  height: 100%;
+
 }
 .AboutAchive {
   /* align-items: center; */
@@ -1110,13 +1114,14 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 40px;
+  gap: 40px;
   /* gap: 40px; */
   color: var(--ConText-color);
 }
 .content{
   display: flex;
   flex-direction: column;
-  padding: 40px;
 }
 .content h2{
   font-size: 3rem;
@@ -1126,18 +1131,28 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
 }
 
 .projectImg a img{
-  width: 600px;
-  margin: 40px;
+  width: 40vw;
   border-radius: 20px;
-  filter: grayscale(1);
-  transition: .3s ease-in-out;
+  /* filter: grayscale(1); */
+  /* transition: .3s ease-in-out; */
 }
-.projectImg a img:hover{
+/* .projectImg a img:hover{
   filter: grayscale(0);
-}
+} */
 
 
 @media only screen and (max-width: 1000px) {
+
+
+.ProCard{
+  flex-direction: column;
+  text-align: center;
+}
+.projectImg a img{
+  width: 100%;
+  border-radius: 20px;
+}
+
   .backname,
   .backnameTwo {
     display: none;

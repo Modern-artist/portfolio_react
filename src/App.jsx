@@ -5,6 +5,7 @@ import Achive from "./pages/achivement/Achive";
 import Skills from './pages/skills/Skills';
 import { Routes, Route} from 'react-router-dom';
 import Project from  './pages/projects/Project';
+// import UnderDevelopment from './pages/underDevelopment/UnderDevelopment';
 // import NavBar from './components/NavBar';
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Achivement" element={<Achive />} />
         <Route path="/Project" element={<Project />} />
+        {/* <Route path="/underDevelopment" element={<UnderDevelopment />} /> */}
       </Routes>
     </>
   );
