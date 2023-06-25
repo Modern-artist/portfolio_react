@@ -8,8 +8,6 @@ import Footer from "../components/footer";
 import multiSkill from "../assets/img1.png";
 import Service from "../components/Service";
 import { SocialIcon } from "../components/SocialIcon";
-import { Document } from "react-pdf";
-import Resume from "../assets/resume.pdf";
 
 
 // Import Swiper styles

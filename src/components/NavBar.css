@@ -56,11 +56,6 @@
   padding: 20px;
 }
 .navlinks a {
-  /* color: #f3f3f3;
-    letter-spacing: 1px;
-    font-weight: 500 ;
-    padding: 5px 0 5px 0px;
-    border-bottom: 3px solid #fdc02600; */
   display: block;
   height: 100%;
   font-size: 1.1rem;
@@ -131,10 +126,14 @@
   /* padding-top: 20px; */
   padding-right: 20px;
 }
-
-@media (max-width: 750px) {
-  .navlinks{
+  .responsive {
     position: absolute;
+    gap: 20px;
+    padding: 40px;
+    width: 200px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: flex;
     top: 60px;
     right: 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -143,8 +142,18 @@
     z-index: 10;
     background: var(--primary-color);
   }
-  .navLinks a{
-    margin: .5rem 0;
+  .responsive a{
+    text-decoration: none;
+    color: #d7d7d7;
+  }
+  .responsive {
+    display: none;
+  }
+
+@media (max-width: 750px) {
+
+  .vis {
+    display: flex;
   }
   .hamBurger{
     display: initial;
@@ -152,7 +161,7 @@
   .theme{
     display: none;
   }
-  .togglenavlnk{
+  #togglenavlnk{
     display: none;
   }
 }

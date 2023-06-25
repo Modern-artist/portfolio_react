@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
+
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { MdLightMode, MdNightlight } from "react-icons/md";
@@ -8,14 +9,13 @@ import { gsap, Tween, Power4 } from "gsap";
 import SplitType from "split-type";
 
 const NavBar = () => {
+  const [isResponsive, setResponsive] = useState(false);
+  // const toggleNavbar = () => {
+  //   console.log("hello");
+  //   setResponsive(!isResponsive);
+  // };
   useEffect(() => {
-    var cursor = document.querySelector(".cursor");
-    var cursor2 = document.querySelector(".cursor2");
-    document.onmousemove = (e) => {
-      cursor.style.cssText = cursor2.style.cssText =
-        "left:" + e.clientX + "px; top:" + e.clientY + "px;";
-    };
-
+       
     let mytext = new SplitType(".logoChar");
     gsap.to(mytext.chars, {
       y: "0%",
@@ -24,12 +24,12 @@ const NavBar = () => {
       delay: 0.1,
     });
 
-    const ham = document.getElementById('ham')
-    const navlnk = document.getElementById('navlnk')
+    // const ham = document.getElementById('ham')
+    // const togglenavlnk = document.getElementById("togglenavlnk");
 
-    ham.addEventListener('click', () => {
-      navlnk.classList.toggle('togglenavlnk')
-    })
+    // ham.addEventListener('click', () => {
+    //   togglenavlnk.className("viewTogglenavlnk");
+    // })
 
     const body = document.getElementsByTagName("body")[0];
     const light = document.getElementById("light");
@@ -39,20 +39,11 @@ const NavBar = () => {
       light.classList.remove('active');
       dark.classList.add('active');
       body.classList.add("light");
-      // for(var i = 0; i < serviceCard.length; i++){
-      //   serviceCard[i].classList.remove("serCard");
-      //   serviceCard[i].classList.add("newSerCard");
-      // }
       gsap.to(".serviceCard", {
-        // x: 0,
-        // duration: 3,
         boxShadow: "18px 18px 36px #c9c9c9, -18px -18px 36px #ffffff",
         scale: 1.05,
         scrollTrigger: {
-          // color:'blue',
           trigger: ".services",
-          // pin: true,
-          // markers: true,
           scrub: 1,
           start: "top 80%",
           end: "bottom 80%",
@@ -60,24 +51,24 @@ const NavBar = () => {
         },
       });
     })
+   
+    // function toggleNavbar() {
+    //   var navbar = document.getElementById("togglenavlnk");
+    //   if (navbar.className === "navlinks") {
+    //     navbar.className += " responsive";
+    //   } else {
+    //     navbar.className = "navlinks";
+    //   }
+    // }
     dark.addEventListener("click", () => {
       dark.classList.remove("active");
       light.classList.add("active");
       body.classList.remove("light");
-      // for (var i = 0; i < serviceCard.length; i++) {
-      //   serviceCard[i].classList.remove("newSerCard");
-      //   serviceCard[i].classList.add("serCard");
-      // }
       gsap.to(".serviceCard", {
-        // x: 0,
-        // duration: 3,
         boxShadow: "12px 12px 24px #131313, -12px -12px 24px #292929",
         scale: 1.05,
         scrollTrigger: {
-          // color:'blue',
           trigger: ".services",
-          // pin: true,
-          // markers: true,
           scrub: 1,
           start: "top 80%",
           end: "bottom 80%",
@@ -96,7 +87,12 @@ const NavBar = () => {
           <img src={logo} alt="" />
           <h1 className="logoChar">Dev</h1>
         </Link>
-        <div className="navlinks" id="navlnk">
+        <div className="navlinks" id="togglenavlnk">
+          <Link to="/AllAchivements">Achivements</Link>
+          <Link to="/Skills">Skills</Link>
+          <Link to="/Project">Projects</Link>
+        </div>
+        <div className={`responsive ${isResponsive ? "vis" : ""}`}>
           <Link to="/AllAchivements">Achivements</Link>
           <Link to="/Skills">Skills</Link>
           <Link to="/Project">Projects</Link>
@@ -105,7 +101,11 @@ const NavBar = () => {
           <MdLightMode color={"#fdc126"} id="light" className="mode active" />
           <MdNightlight id="dark" className="mode" />
         </div>
-        <div className="hamBurger" id="ham">
+        <div
+          className="hamBurger"
+          id="ham"
+          onClick={() => setResponsive(!isResponsive)}
+        >
           <FaBars size={28} color={"#c6c6c6"} />
         </div>
       </nav>
