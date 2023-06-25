@@ -66,7 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 24vw;
-  min-width: 400px;
+  min-width: 360px;
   background-color: var(--card-bg);
   aspect-ratio: 1.7;
   align-items: center;
@@ -118,7 +118,6 @@ body {
   display: none;
 }
 
-
 @keyframes scrollAnime {
   0% {
     top: 0px;
@@ -126,23 +125,22 @@ body {
   /* 25%  {top: 200px;} */
   50% {
     top: -10px;
-    opacity: .5;
+    opacity: 0.5;
   }
   /* 75%  {top: -100px;} */
   100% {
-    top: -20px ;
+    top: -20px;
     opacity: 0;
   }
 }
-.boxArw{
+.boxArw {
   position: relative;
 }
-.boxArw svg{
+.boxArw svg {
   position: relative;
   /* display: none; */
-  
-  animation: 1.6s infinite linear scrollAnime;
 
+  animation: 1.6s infinite linear scrollAnime;
 }
 
 .containar {
@@ -213,7 +211,7 @@ body {
 .heading {
   font-size: 1.5rem;
   line-height: normal;
-  
+
   display: flex;
   align-items: center;
 }
@@ -303,11 +301,11 @@ body {
   /* margin: 28px; */
   letter-spacing: 250%;
   /* box-shadow: var(--box-shadow); */
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
-.hireBtn:hover{
-box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0px 20px;
-
+.hireBtn:hover {
+  box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px,
+    rgba(252, 208, 49, 0.22) 0px 0px 20px;
 }
 .boxArw {
   border: 3px solid var(--ligText-color);
@@ -527,9 +525,9 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   border-left: transparent;
   border-radius: 0 20px 20px 0;
   transform: translateX(-200%);
-  text-align: center;;
+  text-align: center;
 }
-.aboutText p{
+.aboutText p {
   line-height: 180%;
 }
 
@@ -629,8 +627,8 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
 }
 .serviceCard button:hover {
   background-color: #fccf31;
-box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0px 20px;
-  
+  box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px,
+    rgba(252, 208, 49, 0.22) 0px 0px 20px;
 }
 .extra {
   height: 100vh;
@@ -716,10 +714,11 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   width: 100vw;
   display: flex;
   flex-direction: row;
+  align-items: center;
   /* justify-content: space-evenly; */
 }
 .reviewAbt {
-  width: 60vw;
+  width: fit-content;
   padding: 40px;
   text-align: left;
   align-items: center;
@@ -739,7 +738,7 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
 .reviewAbt p {
   margin-top: 40px;
   color: var(--ligText-color);
-  /* width: 80%; */
+  /* width: 50vw; */
   line-height: 200%;
   font-size: 1.2rem;
   opacity: 0.7;
@@ -766,7 +765,7 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 2rem 2rem 0 0;
+  /* margin: 2rem 2rem 0 0; */
 }
 .rating {
   font-size: 2rem;
@@ -808,13 +807,8 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
-  /* justify-content: space-around; */
-  /* margin: 60px; */
   padding: 20px;
   scale: 0.8;
-  /* width: 130%; */
-  /* position: relative;
-  left: 0; */
 }
 .revCards::-webkit-scrollbar {
   width: 6px;
@@ -842,6 +836,7 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
 .bigCard {
   animation: 3s infinite ease-in-out hovering;
   margin: 0;
+  scale: 0.8;
 }
 @keyframes hovering {
   0% {
@@ -895,11 +890,16 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   color: var(--ligText-color);
   opacity: 0.6;
 }
+.footerText {
+  text-align: center;
+  width: 100vw;
+  color: var(--ConText-color);
+  padding: 20px 0;
+  /* background-color: #00c9a7; */
+}
 .footCont {
-  /* width: 640px; */
   max-width: 640px;
   min-width: 320px;
-  /* width: 550px; */
   padding: 20px;
   margin: 20px;
   width: 30vw;
@@ -1041,10 +1041,9 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   overflow: hidden;
   max-height: 320px;
 }
-.achImg img{
+.achImg img {
   /* width: 120%; */
   height: 100%;
-
 }
 .AboutAchive {
   /* align-items: center; */
@@ -1101,13 +1100,13 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   justify-content: space-between;
 }
 
-.allProject{
+.allProject {
   display: flex;
   flex-direction: column;
   padding: 40px;
   gap: 40px;
 }
-.ProCard{
+.ProCard {
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   border-radius: 20px;
@@ -1119,18 +1118,18 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   /* gap: 40px; */
   color: var(--ConText-color);
 }
-.content{
+.content {
   display: flex;
   flex-direction: column;
 }
-.content h2{
+.content h2 {
   font-size: 3rem;
   margin-bottom: 20px;
   color: #fdc126;
   font-family: "Oswald", sans-serif;
 }
 
-.projectImg a img{
+.projectImg a img {
   width: 40vw;
   border-radius: 20px;
   /* filter: grayscale(1); */
@@ -1140,18 +1139,15 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   filter: grayscale(0);
 } */
 
-
 @media only screen and (max-width: 1000px) {
-
-
-.ProCard{
-  flex-direction: column;
-  text-align: center;
-}
-.projectImg a img{
-  width: 100%;
-  border-radius: 20px;
-}
+  .ProCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  .projectImg a img {
+    width: 100%;
+    border-radius: 20px;
+  }
 
   .backname,
   .backnameTwo {
@@ -1196,7 +1192,7 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   }
 
   .reviewAbt {
-    width: 100%;
+    /* width: 100vw; */
     padding: 40px;
     text-align: left;
     align-items: center;
@@ -1204,7 +1200,6 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   .footer {
     flex-direction: column;
   }
-
 
   .achiveBgText {
     display: none;
@@ -1223,46 +1218,61 @@ box-shadow: rgba(252, 208, 49, 0.4) 0px 0px 20px, rgba(252, 208, 49, 0.22) 0px 0
   .revCards {
     display: none;
   }
-  .review-card{
-    /* min-width: 300px !important;
-    max-width: 300px !important; */
-    scale: .8;
+  .review-card {
     margin: 0px !important;
   }
 }
-@media (max-width:700px) {
+@media (max-width: 700px) {
   .footAbt {
-  width: initial;
-}
-.footCont{
-  max-width: 90%;
-  /* min-width: 90%; */
-}
+    width: initial;
+  }
+
+
+  .ProCard,
+  .allProject {
+    display: flex;
+    gap: 40px;
+    padding: 12px;
+  }
 }
 @media (max-width: 450px) {
   .moreText,
   .aboutText {
     width: 90%;
   }
-  .SkillCard {
-    scale: 0.8;
+  .SkillCard{
+    min-width: 80%;
   }
-  .serviceCard{
+  .allSkills {
+    padding: 10px;
+  }
+  .reviewAbt {
+    padding: 20px;
+    width: 90%;
+  }
+  .review-card {
+    width: fit-content;
+    padding: 20px;
+    width: 100vw;
+  }
+  .serviceCard {
     margin: 0px;
     border: 1px solid #fff;
     max-width: 70% !important;
   }
-  h1{
+  h1 {
+    font-size: 3rem !important;
+  }
+  h1 span {
     font-size: 2.5rem !important;
   }
-  h1 span{
-    font-size: 2.5rem !important;
+  h2{
+    font-size: 2.3rem !important;
   }
-  .services{
-    gap: 20px;
+  .services {
+    gap: 80px;
   }
-  .footCont{
-    max-width: 440px;
-    /* min-width: 90%; */
+  .footCont {
+    width: 80%;
   }
 }

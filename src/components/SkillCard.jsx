@@ -15,7 +15,7 @@ const SkillCard = ({
         <span>{index}</span>
       </div>
       <h3>{title}</h3>
-      <p>{About}</p>
+      {/* <p>{About}</p> */}
     </div>
   );
 };
