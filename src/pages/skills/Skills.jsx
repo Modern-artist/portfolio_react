@@ -12,7 +12,7 @@ const Skills = () => {
       About:
         "lorem Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
     },
-    { title: "React JS" },
+    { title: "React JS", About:"" },
     { title: "SCSS" },
     { title: "Django" },
     { title: "AI / XD of Adobe" },
